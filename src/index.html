@@ -162,12 +162,12 @@
 						</div>
 						<button type="button" class="swiper-prev device-review-prev">
 							<svg xmlns="http://www.w3.org/2000/svg" width="21" height="39" viewBox="0 0 21 39" fill="none">
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M20.5687 38.5525C21.15 37.9623 21.1428 37.0126 20.5525 36.4313L3.62138 19.7567L20.5686 2.55266C21.15 1.96248 21.1428 1.01277 20.5527 0.431399C19.9625 -0.149965 19.0128 -0.142824 18.4314 0.447348L0.431393 18.7201C0.152191 19.0035 -0.0029727 19.3863 4.14249e-05 19.7841C0.00305567 20.1819 0.164001 20.5623 0.447466 20.8415L18.4475 38.5687C19.0377 39.15 19.9874 39.1428 20.5687 38.5525Z" fill="#6E6E6E" />
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M20.5687 38.5525C21.15 37.9623 21.1428 37.0126 20.5525 36.4313L3.62138 19.7567L20.5686 2.55266C21.15 1.96248 21.1428 1.01277 20.5527 0.431399C19.9625 -0.149965 19.0128 -0.142824 18.4314 0.447348L0.431393 18.7201C0.152191 19.0035 -0.0029727 19.3863 4.14249e-05 19.7841C0.00305567 20.1819 0.164001 20.5623 0.447466 20.8415L18.4475 38.5687C19.0377 39.15 19.9874 39.1428 20.5687 38.5525Z" fill="white" />
 							</svg>
 						</button>
 						<button type="button" class="swiper-next device-review-next">
 							<svg xmlns="http://www.w3.org/2000/svg" width="21" height="39" viewBox="0 0 21 39" fill="none">
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M20.5687 38.5525C21.15 37.9623 21.1428 37.0126 20.5525 36.4313L3.62138 19.7567L20.5686 2.55266C21.15 1.96248 21.1428 1.01277 20.5527 0.431399C19.9625 -0.149965 19.0128 -0.142824 18.4314 0.447348L0.431393 18.7201C0.152191 19.0035 -0.0029727 19.3863 4.14249e-05 19.7841C0.00305567 20.1819 0.164001 20.5623 0.447466 20.8415L18.4475 38.5687C19.0377 39.15 19.9874 39.1428 20.5687 38.5525Z" fill="#6E6E6E" />
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M20.5687 38.5525C21.15 37.9623 21.1428 37.0126 20.5525 36.4313L3.62138 19.7567L20.5686 2.55266C21.15 1.96248 21.1428 1.01277 20.5527 0.431399C19.9625 -0.149965 19.0128 -0.142824 18.4314 0.447348L0.431393 18.7201C0.152191 19.0035 -0.0029727 19.3863 4.14249e-05 19.7841C0.00305567 20.1819 0.164001 20.5623 0.447466 20.8415L18.4475 38.5687C19.0377 39.15 19.9874 39.1428 20.5687 38.5525Z" fill="white" />
 							</svg>
 						</button>
 					</div>
@@ -180,13 +180,59 @@
 						<p class="promo__text">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit molestias, libero accusamus esse distinctio odit? Odio, beatae incidunt? Nulla odio aperiam quaerat aliquid neque dolor laborum placeat illum facere quidem animi minus at, odit maiores! Odio deserunt voluptatibus quod perspiciatis animi alias beatae pariatur ab aut. Soluta ipsam sed officiis?
 						</p>
-						<ul class="promo__specifications specifications">
-							<li class="specifications__item">Lorem, ipsum dolor.</li>
-							<li class="specifications__item">Lorem, dfg fgdf gdf</li>
-							<li class="specifications__item">Lorem, rter dfg ert</li>
-						</ul>
+						<ol class="promo__specifications specifications">
+							<li class="specifications__item">Loremskjenf ksjdnfksjdf , ipsum dolor.</li>
+							<li class="specifications__item">Lorem,  kdsfjnb kdjffn kdfdfg fgdf gdf</li>
+							<li class="specifications__item">Lorem, rldkldfkmter dfg ert</li>
+						</ol>
 						<a href="#" class="promo__button">заказать</a>
 					</div>
+				</section>
+				<section class="page__form form-page">
+					<form action="api.php" method="post" class="form">
+						<h3 class="form__title">Level Up</h3>
+						<div class="simple_timer timer">
+							<div class="timer__item">
+								<span class="hours time">00</span>
+								<span class="timer__description">часов</span>
+							</div>
+							: 
+							<div class="timer__item">
+								<span class="minutes time">00</span>
+								<span class="timer__description">минут</span>
+							</div>
+							: 
+							<div class="timer__item">
+								<span class="seconds time">00</span>
+								<span class="timer__description">секунд</span>
+							</div>
+						</div>
+						<div class="form__img">
+							<img src="img/prod.png" alt="product">
+						</div>
+						
+						<div class="form__costs costs">
+							<div class="costs__item">
+								<p class="form__text">Старая цена</p>
+								<div class="costs__old cost-text">$105</div>
+							</div>
+							<div class="costs__item">
+								<p class="form__text">Новая цена</p>
+								<div class="costs__new cost-text">$59</div>
+							</div>
+						</div>
+						<div class="form__inputs inputs">
+							<div class="inputs__item">
+								<label for="name1" class="form__text">Имя</label>
+								<input type="text" name="Name" required maxlength="32" id="name1">
+							</div>
+							<div class="inputs__item">
+								<label for="phone" class="form__text">Телефон</label>
+								<input type="tel" name="phone" required maxlength="32" id="phone">
+							</div>
+						</div>
+						<button class="form__submit" type="submit">заказать</button>
+					</form>
 				</section>
 			</main>
 			@@include('html/_footer.htm',{})
