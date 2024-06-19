@@ -9,8 +9,8 @@
 .promo {
 	min-height: 100dvh;
 	&__bg[class] {
-		position: absolute;
-		width: 100%;
+		// position: absolute;
+		// width: 100%;
 	}
 
 	&__container {
@@ -41,6 +41,7 @@
 		background-color: rgb(79, 117, 21);
 		border-radius: 16px;
 		transition: background-color 0.3s;
+		margin-bottom: 30px;
 		&:hover{
 			background-color: rgb(150, 177, 75);
 		}
@@ -66,4 +67,288 @@
 	}
 }
 
-//====================================================================================================
+//=====INGREDIENTS===============================================================================================
+
+.page {
+
+	&__ingredients {
+		padding-top: 40px;
+		background: rgb(2,0,36);
+		background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+		.promo__button {
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			margin-top: 30px;
+		}
+	}
+}
+.ingredients {
+
+	&__container {
+		position: relative;
+		display: grid;
+		grid-template-columns: 28% 1fr 28%;
+	}
+
+
+		&__line {
+			position: absolute;
+			width: 75px;
+			height: 5px;
+			background-color: white;
+			&_decor01 {
+				left: 32%;
+				top: 27%;
+				transform: rotate(22deg);
+			}
+
+			&_decor02 {
+				right: 32%;
+				top: 27%;
+				transform: rotate(338deg);
+			}
+
+			&_decor03 {
+				left: 32%;
+				top: 50%;
+			}
+
+			&_decor04 {
+				right: 32%;
+				top: 50%;
+			}
+
+			&_decor05 {
+				left: 32%;
+				top: 75%;
+				transform: rotate(338deg);
+			}
+
+			&_decor06 {
+				right: 32%;
+				top: 75%;
+				transform: rotate(22deg);
+			}
+		}
+
+
+	&__col {
+		display: flex;
+		flex-direction: column;
+		row-gap: 30px;
+		justify-content: space-between;
+		&_one {
+		}
+
+		&_two {
+			align-self: center;
+			justify-self: center;
+		}
+
+		&_three {
+		}
+	}
+
+	&__item {
+		position: relative;
+		outline: 1px solid red;
+		display: grid;
+		justify-items: center;
+		text-align: center;
+		// &:not(:last-child) {margin-bottom: toRem(30);}
+	
+	
+
+		&_4 {
+			&::after{
+				bottom: 0;
+				right: 100%;
+				transform: rotate(338deg);
+			}
+		}
+
+		&_5 {
+		}
+
+		&_6 {
+			&::after{
+				
+			}
+		}
+	}
+
+	&__text {
+		font-size: 16px;
+		color: white;
+		line-height: 1.4;
+	}
+
+	&__img {
+		margin-bottom: 10px;
+		width: 100px;
+		border-radius: 50%;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__product {
+		width: 200px;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+
+/*======reviews===========*/
+
+.section {
+
+	&__reviews {
+	}
+}
+.reviews {
+
+	&__container {
+	}
+}
+.device-review {
+
+	&__slider {
+	}
+}
+.swiper {
+}
+.otlvant-review {
+
+	&__wrapper {
+	}
+
+	&__slide {
+	}
+}
+.mobile-min {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.feedback {
+
+	&__content {
+	}
+
+	&__top {
+	}
+
+	&__name {
+	}
+
+	&__date {
+	}
+
+	&__star {
+	}
+
+	&__star-item {
+	}
+
+	&__text-wrapper {
+	}
+
+	&__text {
+	}
+
+	&__write {
+	}
+
+	&__photo {
+	}
+
+	&__photo-img {
+	}
+
+	&__question-block {
+	}
+}
+.question-block {
+
+	&__text {
+	}
+
+	&__text-light {
+	}
+
+	&__quantity {
+	}
+
+	&__answers {
+	}
+
+	&__button {
+
+		&_yes {
+		}
+
+		&_no {
+		}
+	}
+}
+.questiion-block {
+
+	&__span-quantity {
+	}
+}
+.review-device-pagination {
+}
+.pagination {
+}
+
+.swiper-next {
+}
+.device-review-next {
+}
+
+.wiper-prev {
+
+}
+
+.device-review-prev {
+
+}
+
+
+/*========PROMO=========*/
+
+.page {
+
+	&__promo {
+	}
+}
+.promo {
+
+	&__container {
+	}
+
+	&__img {
+	}
+
+	&__text {
+	}
+
+	&__specifications {
+	}
+
+	&__button {
+	}
+}
+.specifications {
+
+	&__item {
+	}
+}
