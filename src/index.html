@@ -23,7 +23,7 @@
 								<li class="advantages__item">Lorem ipsum dolor sit amet, consectetur adipisicing..</li>
 							</ul>
 						</div>
-						<a href="#" class="promo__button">заказать</a>
+						<a href="#form" class="promo__button">заказать</a>
 					</div>
 				</section>
 				<section class="page__ingredients ingredients">
@@ -80,7 +80,7 @@
 							</div>
 						</div>
 					</div>
-					<a href="#" class="promo__button">заказать</a>
+					<a href="#form" class="promo__button">заказать</a>
 				</section>
 				<section class="section__reviews reviews">
 					<div class="reviews__container">
@@ -172,67 +172,71 @@
 						</button>
 					</div>
 				</section>
-				<section class="page__promo promo">
-					<div class="promo__container">
-						<div class="promo__img">
-							<img src="@img/doctor.png" alt="">
+				<section class="page__doctor doctor">
+					<div class="doctor__container">
+						<div class="doctor__img">
+							<img src="@img/doctor-product.png" alt="доктор с продуктом">
 						</div>
-						<p class="promo__text">
+						<p class="doctor__text">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit molestias, libero accusamus esse distinctio odit? Odio, beatae incidunt? Nulla odio aperiam quaerat aliquid neque dolor laborum placeat illum facere quidem animi minus at, odit maiores! Odio deserunt voluptatibus quod perspiciatis animi alias beatae pariatur ab aut. Soluta ipsam sed officiis?
 						</p>
-						<ol class="promo__specifications specifications">
+						<ol class="doctor__specifications specifications">
 							<li class="specifications__item">Loremskjenf ksjdnfksjdf , ipsum dolor.</li>
 							<li class="specifications__item">Lorem,  kdsfjnb kdjffn kdfdfg fgdf gdf</li>
 							<li class="specifications__item">Lorem, rldkldfkmter dfg ert</li>
 						</ol>
-						<a href="#" class="promo__button">заказать</a>
+						<a href="#form" class="promo__button">заказать</a>
 					</div>
 				</section>
-				<section class="page__form form-page">
-					<form action="api.php" method="post" class="form">
-						<h3 class="form__title">Level Up</h3>
-						<div class="simple_timer timer">
-							<div class="timer__item">
-								<span class="hours time">00</span>
-								<span class="timer__description">часов</span>
+				<section id="form" class="page__form form-page">
+					<div class="form__container">
+						<form action="#" method="post" class="form">
+							<h3 class="form__title">Level Up</h3>
+							<div class="simple_timer timer">
+								<div class="timer__item">
+									<span class="hours time">00</span>
+									<span class="timer__description">часов</span>
+								</div>
+								: 
+								<div class="timer__item">
+									<span class="minutes time">00</span>
+									<span class="timer__description">минут</span>
+								</div>
+								: 
+								<div class="timer__item">
+									<span class="seconds time">00</span>
+									<span class="timer__description">секунд</span>
+								</div>
 							</div>
-							: 
-							<div class="timer__item">
-								<span class="minutes time">00</span>
-								<span class="timer__description">минут</span>
+							<div class="form__img">
+								<img src="img/prod.png" alt="product">
 							</div>
-							: 
-							<div class="timer__item">
-								<span class="seconds time">00</span>
-								<span class="timer__description">секунд</span>
+							
+							<div class="form__costs costs">
+								<div class="costs__item">
+									<p class="form__text">Старая цена</p>
+									<div class="costs__old cost-text">$105</div>
+								</div>
+								<div class="costs__item">
+									<p class="form__text">Новая цена</p>
+									<div class="costs__new cost-text">$59</div>
+								</div>
 							</div>
-						</div>
-						<div class="form__img">
-							<img src="img/prod.png" alt="product">
-						</div>
-						
-						<div class="form__costs costs">
-							<div class="costs__item">
-								<p class="form__text">Старая цена</p>
-								<div class="costs__old cost-text">$105</div>
+							<div class="form__inputs inputs">
+								<div class="inputs__item">
+									<p class="form__text">Имя</p>
+									<input id="name1" type="text" name="Name" placeholder="Введите имя" autocomplete="off" required maxlength="32" id="name1">
+									<label for="name1" class="inputs__label">Наример Вася</label>
+								</div>
+								<div class="inputs__item">
+									<p class="form__text">Телефон</p>
+									<input id="phone" type="tel" name="phone" placeholder="Введите телефон" autocomplete="off" required maxlength="32" id="phone">
+									<label for="phone" class="inputs__label">Например +78005553535</label>
+								</div>
 							</div>
-							<div class="costs__item">
-								<p class="form__text">Новая цена</p>
-								<div class="costs__new cost-text">$59</div>
-							</div>
-						</div>
-						<div class="form__inputs inputs">
-							<div class="inputs__item">
-								<label for="name1" class="form__text">Имя</label>
-								<input type="text" name="Name" required maxlength="32" id="name1">
-							</div>
-							<div class="inputs__item">
-								<label for="phone" class="form__text">Телефон</label>
-								<input type="tel" name="phone" required maxlength="32" id="phone">
-							</div>
-						</div>
-						<button class="form__submit" type="submit">заказать</button>
-					</form>
+							<button class="form__submit" type="submit">заказать</button>
+						</form>
+					</div>
 				</section>
 			</main>
 			@@include('html/_footer.htm',{})

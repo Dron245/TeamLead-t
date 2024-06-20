@@ -2,7 +2,7 @@
 .page {
 
 	&__promo {
-		padding: toRem(60) toRem(0) toRem(0) toRem(20);
+		padding: toRem(60) toRem(0) toRem(20) toRem(0);
 		@extend %videoBackground;
 	}
 }
@@ -20,9 +20,17 @@
 		color: white;
 		font-size: 60px;
 		font-weight: 600;
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 60, 30,0,768,320); 
+		}
 	}
 
 	&__img {
+		width: 200px;
+		img {
+			width: 100%;
+			height: auto;
+		}
 	}
 
 	&__advantages {
@@ -39,6 +47,7 @@
 		border-radius: 16px;
 		transition: background-color 0.3s;
 		margin-bottom: 30px;
+
 		&:hover{
 			background-color: rgb(150, 177, 75);
 		}
@@ -51,6 +60,9 @@
 		font-size: 30px;
 		color: white;
 		margin-bottom: 20px;
+		@media (max-width:$mobile){
+			@include adaptiveValue("font-size", 30, 20,0,768,320); 
+	  }
 	}
 
 	&__list {
@@ -61,6 +73,9 @@
 	&__item {
 		color: white;
 		font-size: 20px;
+		@media (max-width:$mobile){
+			@include adaptiveValue("font-size", 20, 14,0,768,320); 
+	  }
 	}
 }
 
@@ -86,14 +101,25 @@
 		position: relative;
 		display: grid;
 		grid-template-columns: 28% 1fr 28%;
+		@media (max-width:$mobile){
+			grid-template-rows: auto auto;
+			grid-template-columns: 1fr;
+			row-gap: 10px;
+		}
 	}
 
 
 		&__line {
 			position: absolute;
-			width: 75px;
 			height: 5px;
+			@media (min-width:em(1100)){
+				width: 75px;
+			}
+			@include adaptiveValue("width", 75, 30,0, 1100,768);
 			background-color: white;
+			@media (max-width:$mobile){
+				 display: none; 
+			}
 			&_decor01 {
 				left: 32%;
 				top: 27%;
@@ -132,15 +158,24 @@
 
 	&__col {
 		display: flex;
-		flex-direction: column;
 		row-gap: 30px;
 		justify-content: space-between;
+		@media (min-width:$mobile){
+			flex-direction: column;
+		}
+		@media (max-width:$mobile){
+			 column-gap: 20px; 
+		}
 		&_one {
 		}
 
 		&_two {
 			align-self: center;
 			justify-self: center;
+			@media (max-width:$mobile){
+				 grid-row: 1 / 2;
+				 margin-bottom: 20px; 
+			}
 		}
 
 		&_three {
@@ -149,10 +184,16 @@
 
 	&__item {
 		position: relative;
-		outline: 1px solid red;
-		display: grid;
-		justify-items: center;
-		text-align: center;
+		// outline: 1px solid red;
+		@media (min-width:$mobile){
+			  
+			display: grid;
+			justify-items: center;
+		}
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: balance;
 		// &:not(:last-child) {margin-bottom: toRem(30);}
 	
 	
@@ -179,6 +220,9 @@
 		font-size: 16px;
 		color: white;
 		line-height: 1.4;
+		@media (max-width:$mobile){
+			 font-size: 14px; 
+		}
 	}
 
 	&__img {
@@ -186,6 +230,9 @@
 		width: 100px;
 		border-radius: 50%;
 		overflow: hidden;
+		@media (max-width:$mobileSmall){
+			 width: 75px; 
+		}
 		img {
 			width: 100%;
 			height: auto;
@@ -293,6 +340,9 @@
 	justify-content: center;
 	align-items: center;
 	gap: 20px;
+	@media (min-width:$mobile){
+		 display: none; 
+	}
 	.swiper-pagination-bullet {
 		width: 10px;
 		height: 10px;
@@ -323,26 +373,38 @@
 .device-review-prev {
 
 }
-
+button svg path {
+	transition: fill 0.15s;
+}
+.swiper-button-disabled svg path {
+	fill: #797979;
+}
 
 /*========PROMO=========*/
 
 .page {
 
-	&__promo {
+	&__doctor {
 		background: rgb(2,0,36);
 		background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 		
 		padding-block: 40px;
 	}
 }
-.promo {
+.doctor {
 
 	&__container {
+		display: grid;
+		justify-items: center;
+		grid-template-columns: 100%;
+		row-gap: 40px;
 	}
 
 	&__img {
-		width: 500px;
+		width: 400px;
+		@media (max-width:$mobileSmall){
+			 @include adaptiveValue("width", 300, 200, 479,	320); 
+		}
 		img {
 			width: 100%;
 			height: auto;
@@ -356,8 +418,11 @@
 	}
 
 	&__specifications {
-		display: flex;
-		gap: 40px;
+		padding-left: 20px;
+		@media (min-width:$mobile){
+			display: flex;
+			gap: 40px;
+		}
 
 	}
 
@@ -365,20 +430,29 @@
 	}
 }
 .specifications {
-	// width: 100%;
-	animation: scroll 8s infinite linear;
+	@media (min-width:$mobile){
+		animation: scroll 12s infinite linear;
+	}
+	
 	&__item {
 		font-size: 24px;
 		color: white;
+		&:not(:last-child) {margin-bottom: toRem(10);}
+		@media (min-width:$mobile){
+			white-space: nowrap;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 24, 16,0,768,320); 
+		}
 	}
 }
 
 @keyframes scroll {
 	0% {
-		transform: translate3d(120%, 0, 0);
+		transform: translate3d(150%, 0, 0);
 	}
 	100% {
-	  transform: translate3d(-120%, 0, 0);
+	  transform: translate3d(-150%, 0, 0);
 	}
  }
 
@@ -387,11 +461,14 @@
 
 .page__form {
 	background: rgb(2,0,36);
-		background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-		
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+	padding-bottom: 40px;
 }
  .form {
-	width: 50%;
+	@media (min-width:$mobile){
+		  
+		width: 50%;
+	}
 	margin:auto;
 	border: 3px solid rgb(192, 183, 183);
 	border-radius: 16px;
@@ -443,15 +520,7 @@
 	text-transform: uppercase;
 	font-size: 14px;
 }
-.minutes {
 
-}
-.seconds {
-
-}
-.form__costs {
-
-}
 
 .form__text {
 	color: white;
@@ -506,18 +575,14 @@
 	width: 100%;
 }
 .inputs__item {
-	display: grid;
-	justify-items: center;
-	gap: 2px;
+	position: relative;
 	width: 100%;
-	
 }
 
 .inputs__item input {
 	background-color: #f1f1f1;
 	border: 1px solid #C2C2C2;
 	padding: 5px 10px;
-	width: 60%;
 }
 
 .inputs__item:not(:last-child) {
@@ -528,20 +593,37 @@
 }
 .form__submit {
 	margin-top: 10px;
-	background-color: red;
+	padding-block: 10px;
+	background-color: rgb(212, 61, 61);
 	color: white;
 	font-weight: 600;
 	font-size: 24px;
-	border: 1px solid red;
 	border-radius: 6px;
 	width: 60%;
 }
 
 p.form__text {
-	margin-bottom: 0;
+	margin-bottom: 4px;
 }
 
 .img-product {
 	width: 100%;
 	height: auto;
+}
+
+.input__wrapper {
+	position: relative;
+	width: 60%;
+}
+.inputs__label {
+	position: absolute;
+	color: white;
+	opacity: 0;
+	transition: opacity 0.3s;
+	right: 0;
+	top: 8px;
+	font-size: 12px;
+	input:focus + & {
+		opacity: 1;
+	}
 }
